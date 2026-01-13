@@ -24,7 +24,7 @@ const Navbar = () => {
 
         {/* Container that stores the Create a Log Button in Navbar */}
         <div className="container flex-10 flex justify-end">
-            <button className="text-white font-[JetBrainsBold] text-[14px] bg-[#135BEC] px-6 py-[6px] rounded-lg">Start Your Log</button>
+            <button className="text-white font-[JetBrainsBold] text-[14px] bg-[#135BEC] px-6 py-1.5 rounded-lg">Start Your Log</button>
         </div>
         
       </div>
