@@ -22,7 +22,10 @@ const Banner_Homepage = () => {
           {/* Shows the paragraph written in the left container */}
           
           {/* Container for left side buttons */}
-          <div>
+          <div className="mt-10">
+
+            {/* Button on Banner to create a new log */}
+            <Link to="/" className="text-white bg-[#135BEC] font-[JetBrainsBold] py-4 px-8 rounded-lg mr-4">Create a New Log</Link>
             <Link to="/mylogs" className="text-white bg-[#1E293B] font-[JetBrainsBold] py-4 px-8 rounded-lg border border-slate-700">My Logs</Link>
           </div>
 
