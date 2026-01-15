@@ -5,6 +5,7 @@ const MyLogs = () => {
   return (
     <>
     <Sidebar_MyLogs/>
+    
     </>
   )
 }
