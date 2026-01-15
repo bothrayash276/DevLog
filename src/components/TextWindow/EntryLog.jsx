@@ -1,17 +1,27 @@
 import "../CustomFonts.css";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom";
 import { save } from "./localStorageHandler";
+import SaveLocalStorage from "./SaveLocalStorage";
+import { useState } from "react";
 
 const EntryLog = () => {
   const { register, handleSubmit } = useForm();
   const navigate = useNavigate();
+  const [isSaved, setIsSaved] = useState(false)
 
   const formSubmission = (e) => {
-    save(e)
-    console.log(e);
+    save(e);
   };
+
+  const saveAnimation = () => {
+    setTimeout(()=>{
+      setIsSaved(false)
+      navigate("/mylogs")
+    }, 2000)
+  }
+
 
   return (
     <>
@@ -47,8 +57,9 @@ const EntryLog = () => {
         </div>
       </div>
 
+      <div className={isSaved ? "position: fixed right-5 mt-3" : "hidden"}><SaveLocalStorage/></div>
       {/* Stores Form */}
-      <div className="flex flex-col w-1/1 items-center">
+      <div className="flex flex-col w-1/1 items-center relative">
         <form
           onSubmit={handleSubmit((data) => formSubmission(data))}
           className="flex flex-col gap-10 w-8/10 items-center justify-center"
@@ -70,6 +81,7 @@ const EntryLog = () => {
           <input
             type="submit"
             value="SAVE"
+            onClick={()=>{setIsSaved(true); saveAnimation()}}
             className="text-white bg-[#2563EB] font-[JetBrainsBold] rounded-lg px-4 py-2"
           />
         </form>
