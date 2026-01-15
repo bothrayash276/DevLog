@@ -1,13 +1,15 @@
 import "../CustomFonts.css";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 
 const EntryLog = () => {
-    const {register, handleSubmit} = useForm()
+  const { register, handleSubmit } = useForm();
+  const navigate = useNavigate()
 
-    const formSubmission = (e)=>{
-        console.log(e)
-    }
+  const formSubmission = (e) => {
+    console.log(e);
+  };
 
   return (
     <>
@@ -22,34 +24,51 @@ const EntryLog = () => {
           </span>
         </div>
 
-
         {/* Container that stores the Return and Save Button in Navbar */}
         <div className="container flex-1 flex justify-center">
-            {/* Return Button */}
-            <Link
-            to="/mylogs/"
+          {/* Return Button */}
+          <button
+           onClick={()=> navigate(-1)}
             className="text-[#94A3B8] flex gap-2 items-center font-[JetBrainsBold] text-[13px] px-6 py-1.5 mr-5 rounded-lg"
           >
-            <img src="/asset/images/return.svg" alt="" className="w-4 h-4"/>
+            <img src="/asset/images/return.svg" alt="" className="w-4 h-4" />
             RETURN
-          </Link>
+          </button>
           {/* Save Button */}
           <Link
-            to="/mylogs/newlog"
-            className="text-white flex gap-1 font-[JetBrainsBold] text-[14px] bg-[#135BEC] px-3 py-1.5 rounded-lg"
+            to="/mylogs"
+            className="text-white flex items-center gap-3 font-[JetBrainsBold] text-[14px] bg-[#135BEC] px-3 py-1.5 rounded-lg"
           >
-            <img src="/asset/images/save.png" alt="" className="w-5 h-5"/>
-            SAVE
+            <img src="/asset/images/mylogs.svg" alt="" className="w-4 h-4" />
+            MY LOGS
           </Link>
         </div>
       </div>
 
-    {/* Stores Form */}
-    <div className="flex flex-col">
-        <form onSubmit={formSubmission()}>
-            <input type="text" className=""/>
+      {/* Stores Form */}
+      <div className="flex flex-col w-1/1 items-center">
+        <form
+          onSubmit={handleSubmit((data) => formSubmission(data))}
+          className="flex flex-col gap-10 w-8/10 items-center justify-center"
+        >
+          {/* Title Input */}
+          <input
+            type="text"
+            className="text-white font-[JetBrainsBold] w-1/1 h-auto text-5xl border-b-2 border-[#1A45A6] p-3 placeholder:text-slate-800 focus:outline-none"
+            placeholder="Untitled Entry"
+            {...register("title")}
+          />
+          {/* Paragraph Input */}
+          
+
+          <textarea className="text-white font-[JetBrains] w-1/1 field-sizing-content resize-none  placeholder:text-slate-800 focus:outline-none"
+            placeholder="Start writing your developer's log..."
+            {...register("body")}>
+            </textarea>
+                
+          <input type="submit" className="text-white" />
         </form>
-    </div>
+      </div>
     </>
   );
 };
