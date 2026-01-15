@@ -1,12 +1,12 @@
 import React from 'react'
 import "../CustomFonts.css"
 
-const EntryCard_MyLogs = () => {
-    const props = {
-        _id: "tempID",
-        title: "Heading 1",
-        body: "The piano sat silently in the corner of the room. Nobody could remember the last time it had been played. The little girl walked up to it and hit a few of the keys. The sound of the piano rang throughout the house for the first time in years. In the upstairs room, confined to her bed, the owner of the house had tears in her eyes."
-    }
+const EntryCard_MyLogs = ({props}) => {
+    // const props = {
+    //     _id: "tempID",
+    //     title: "Heading 1",
+    //     body: "The piano sat silently in the corner of the room. Nobody could remember the last time it had been played. The little girl walked up to it and hit a few of the keys. The sound of the piano rang throughout the house for the first time in years. In the upstairs room, confined to her bed, the owner of the house had tears in her eyes."
+    // }
 
     const truncate = (str) => {
         let strTrunc = ""
@@ -24,7 +24,7 @@ const EntryCard_MyLogs = () => {
             <img src="/asset/images/three_dots.svg " alt="" className='w-6' />
         </div>
         <div className="text-white font-[JetBrainsBold] text-3xl">{props.title}</div>
-        <div className="text-[#646F7D] font-[JetBrains]">{truncate(props.body)}</div>
+        <div className="text-[#646F7D] font-[JetBrains] mt-5">{truncate(props.body)}</div>
     </div>
     </>
   )
