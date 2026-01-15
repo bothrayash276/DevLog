@@ -2,12 +2,15 @@ import "../CustomFonts.css";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import FileDisplay_MyLogs from "../MyLog/FileDisplay.MyLogs";
+import { save } from "./localStorageHandler";
 
 const EntryLog = () => {
   const { register, handleSubmit } = useForm();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const formSubmission = (e) => {
+    save(e)
     console.log(e);
   };
 
@@ -28,7 +31,7 @@ const EntryLog = () => {
         <div className="container flex-1 flex justify-center">
           {/* Return Button */}
           <button
-           onClick={()=> navigate(-1)}
+            onClick={() => navigate(-1)}
             className="text-[#94A3B8] flex gap-2 items-center font-[JetBrainsBold] text-[13px] px-6 py-1.5 mr-5 rounded-lg"
           >
             <img src="/asset/images/return.svg" alt="" className="w-4 h-4" />
@@ -59,14 +62,17 @@ const EntryLog = () => {
             {...register("title")}
           />
           {/* Paragraph Input */}
-          
-
-          <textarea className="text-white font-[JetBrains] w-1/1 field-sizing-content resize-none  placeholder:text-slate-800 focus:outline-none"
+          <textarea
+            className="text-white font-[JetBrains] w-1/1 min-h-100 p-3 field-sizing-content resize-none  placeholder:text-slate-800 focus:outline-none"
             placeholder="Start writing your developer's log..."
-            {...register("body")}>
-            </textarea>
-                
-          <input type="submit" className="text-white" />
+            {...register("body")}
+          ></textarea>
+          {/* Submit Button */}
+          <input
+            type="submit"
+            value="SAVE"
+            className="text-white bg-[#2563EB] font-[JetBrainsBold] rounded-lg px-4 py-2"
+          />
         </form>
       </div>
     </>
