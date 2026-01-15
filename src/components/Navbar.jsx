@@ -9,14 +9,13 @@ const Navbar = () => {
       <div className="container flex bg-[#0F172A] h-17 items-center px-4 justify-evenly border-b-2 border-slate-800">
         {/* Container that stores Name and Logo of the Website in Navbar */}
         <div className="flex flex-2 items-center gap-4">
-          <img src="asset/images/devlog.svg" className="w-9" />
+          <img src="/asset/images/devlog.svg" className="w-9" />
 
           <span className="text-white text-xl font-[JetBrainsBold]">
             DevLog
           </span>
         </div>
-
-        {/* Container that stores Link Routes to Home and MyLog in Navbar */}
+        
         <div className="container flex-1 flex justify-center gap-10">
           <Link to="/" className="text-white text-[14px] font-[JetBrains]">
             Home
@@ -31,9 +30,12 @@ const Navbar = () => {
 
         {/* Container that stores the Create a Log Button in Navbar */}
         <div className="container flex-10 flex justify-end">
-          <button className="text-white font-[JetBrainsBold] text-[14px] bg-[#135BEC] px-6 py-1.5 rounded-lg">
+          <Link
+            to="/mylogs/newlog"
+            className="text-white font-[JetBrainsBold] text-[14px] bg-[#135BEC] px-6 py-1.5 rounded-lg"
+          >
             Start Your Log
-          </button>
+          </Link>
         </div>
       </div>
     </>

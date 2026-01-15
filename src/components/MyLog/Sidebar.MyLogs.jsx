@@ -16,10 +16,8 @@ const Sidebar_MyLogs = () => {
         <Link to="/mylogs" id="allEnt" className="flex gap-4 px-2 py-2 bg-[#135BEC] rounded-lg w-9/10 mx-2">
             <img src="asset/images/all_entries.svg" alt="" />
             <span className="text-white font-[JetBrains]">All Entries</span>
-        </Link>
-        
+        </Link>   
       </div>
-      {console.log(isFolder)}
     </>
   );
 };

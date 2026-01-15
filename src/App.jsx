@@ -4,6 +4,7 @@ import HomeMainPage from './components/HomeMainPage'
 import MyLogs from './components/MyLogs'
 import { Routes, Route } from 'react-router-dom'
 import Footer from './components/Footer'
+import EntryLog from './components/TextWindow/EntryLog'
 
 function App() {
 
@@ -12,7 +13,7 @@ function App() {
     <Routes>
       <Route path="/" element={<><Navbar/><HomeMainPage/><Footer/></>} />
       <Route path="/mylogs" element={<><Navbar/><MyLogs/><Footer/></>} />
-      <Route path="/mylogs/folders" element={<><Navbar/><MyLogs/><Footer/></>} />
+      <Route path="/mylogs/newlog" element={<><EntryLog/></>} />
     </Routes>
     </>
   )
