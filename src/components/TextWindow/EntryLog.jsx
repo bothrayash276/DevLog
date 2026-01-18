@@ -57,7 +57,9 @@ const EntryLog = () => {
         </div>
       </div>
 
+    {/* PopUp upon saving */}
       <div className={isSaved ? "position: fixed right-5 mt-3" : "hidden"}><SaveLocalStorage/></div>
+
       {/* Stores Form */}
       <div className="flex flex-col w-1/1 items-center relative">
         <form
@@ -69,13 +71,13 @@ const EntryLog = () => {
             type="text"
             className="text-white font-[JetBrainsBold] w-1/1 h-auto text-5xl border-b-2 border-[#1A45A6] p-3 placeholder:text-slate-800 focus:outline-none"
             placeholder="Untitled Entry"
-            {...register("title")}
+            {...register("title", {required:true})}
           />
           {/* Paragraph Input */}
           <textarea
             className="text-white font-[JetBrains] w-1/1 min-h-100 p-3 field-sizing-content resize-none  placeholder:text-slate-800 focus:outline-none"
             placeholder="Start writing your developer's log..."
-            {...register("body")}
+            {...register("body", {required: true})}
           ></textarea>
           {/* Submit Button */}
           <input
