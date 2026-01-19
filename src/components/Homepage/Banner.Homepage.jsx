@@ -32,7 +32,7 @@ const Banner_Homepage = () => {
         </div>
 
         {/* Container for right side of the banner*/}
-        <div className="flex flex-col items-center flex-1 p-4">
+        <div className="flex flex-col items-center justify-center flex-1 p-4">
 
           {/* Header of the window of the journal */}
           <div className="bg-slate-800 h-13 w-8/10 flex items-center p-2 rounded-t-2xl border border-slate-700">
@@ -48,7 +48,7 @@ const Banner_Homepage = () => {
           </div>
 
           {/* The acutal window of the journal */}
-          <div className="bg-slate-800 h-8/10 w-8/10 flex flex-col p-2 px-4 gap-5 rounded-b-2xl border border-slate-700">
+          <div className="bg-slate-800 h-110 w-8/10 flex flex-col p-2 px-4 gap-5 rounded-b-2xl border border-slate-700">
             {/* The Timing */}
             <span className="text-slate-500 font-[JetBrains] mt-3 ">
               # 29 Feb : Created a Sum Code in C++
@@ -63,7 +63,7 @@ const Banner_Homepage = () => {
             {/* Container for the code inside the journal */}
             <div className="flex justify-center flex-1 pt-2">
               {/* Code inside the journal */}
-              <div className="container bg-[#0F172A] w-8/10 h-8/10 rounded-lg p-2">
+              <div className="container bg-[#0F172A] w-8/10 h-8/10 min-h-52.5 max-h-60 rounded-lg p-2">
                 {/* Shows #include <iostream>; */}
                 <p className="mb-5">
                   <span className="text-pink-500 font-[JetBrains] mr-2">

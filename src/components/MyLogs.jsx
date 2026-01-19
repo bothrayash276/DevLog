@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Sidebar_MyLogs from "./MyLog/Sidebar.MyLogs";
 import EntryCard_MyLogs from "./MyLog/EntryCard.MyLogs";
 
 const MyLogs = () => {
   const storage = JSON.parse(localStorage.getItem("userLog")) || [];
+  const [render, setRender] = useState(0)
 
   return (
     <>

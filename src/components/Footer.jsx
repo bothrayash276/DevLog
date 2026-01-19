@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <>
       {/* Black Strip Container - All content is in this */}
-      <div className="bg-black h-[20vh] flex justify-center items-center gap-15 mt-12">
+      <div className="bg-black h-40 flex justify-center items-center gap-15 mt-12 overflow-hidden">
         {/* Contains the Logo and name of the website with website's description */}
         <div className="flex flex-col w-[20vw] gap-4">
           {/* Contains Image and Website Name */}
