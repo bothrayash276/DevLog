@@ -8,7 +8,7 @@ const MyLogs = () => {
 
   return (
     <>
-      <div className="flex justify-center">
+      <div className="flex justify-center h-screen">
         <div id="sidebar">
           <Sidebar_MyLogs />
         </div>

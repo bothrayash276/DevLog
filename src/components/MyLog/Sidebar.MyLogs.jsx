@@ -7,7 +7,7 @@ const Sidebar_MyLogs = () => {
 
   return (
     <>
-      <div className="h-[90vh] w-[17vw] border border-slate-800 flex flex-col">
+      <div className="not-md:hidden h-screen w-[17vw] border border-slate-800 flex flex-col">
         {/* DevJournal heading */}
         <span className="text-white text-xl font-[JetBrainsBold] my-4 mx-2">
           DevJournal

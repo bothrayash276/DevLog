@@ -4,9 +4,9 @@ const Footer = () => {
   return (
     <>
       {/* Black Strip Container - All content is in this */}
-      <div className="bg-black h-40 flex justify-center items-center gap-15 mt-12 overflow-hidden">
+      <div className="bg-black flex justify-center items-center gap-15 mt-12 overflow-hidden">
         {/* Contains the Logo and name of the website with website's description */}
-        <div className="flex flex-col w-[20vw] gap-4">
+        <div className="flex flex-col w-[20vw] not-md:w-1/2 gap-4 py-3">
           {/* Contains Image and Website Name */}
           <div className="container flex gap-4 items-center">
             <img src="asset/images/devlog.svg" className="w-9" alt="" />
@@ -15,7 +15,7 @@ const Footer = () => {
             </span>
           </div>
           {/* Description of the website */}
-          <span className="text-[#94A3B8] text-xs font-[JetBrains] ">
+          <span className="text-[#94A3B8] text-xs font-[JetBrains]">
             A Daily Journal Website for Programmers who can write their all day
             longs struggles.
           </span>

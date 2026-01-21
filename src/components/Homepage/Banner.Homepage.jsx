@@ -6,23 +6,23 @@ const Banner_Homepage = () => {
   return (
     <>
       {/*Container for two sides of banner*/}
-      <div className="flex h-[80vh]">
+      <div className="flex py-20 not-md:flex-col overflow-hidden">
         {/* Container of left side*/}
         <div className="flex-1 flex flex-col justify-center items-center gap-4">
           {/* Shows "Document your" text */}
-          <span className="text-white font-[JetBrainsBold] text-6xl">
+          <span className="text-white font-[JetBrainsBold] not-md:text-4xl text-6xl">
             Document your
           </span>
 
           {/* Shows "code journey." text */}
-          <span className="text-[#135BEC] font-[JetBrainsBold] text-6xl">
+          <span className="text-[#135BEC] font-[JetBrainsBold] not-md:text-4xl text-6xl">
             code journey.
           </span>
 
           {/* Shows the paragraph written in the left container */}
           
           {/* Container for left side buttons */}
-          <div className="mt-10">
+          <div className="mt-10 flex justify-between h-[57.6]">
 
             {/* Button on Banner to create a new log */}
             <Link to="/mylogs/newlog" className="text-white bg-[#135BEC] font-[JetBrainsBold] py-4 px-8 rounded-lg mr-4">Create a New Log</Link>
@@ -35,12 +35,15 @@ const Banner_Homepage = () => {
         <div className="flex flex-col items-center justify-center flex-1 p-4">
 
           {/* Header of the window of the journal */}
-          <div className="bg-slate-800 h-13 w-8/10 flex items-center p-2 rounded-t-2xl border border-slate-700">
+          <div className="bg-slate-800 h-13 w-8/10 not-md:min-w-91.5 flex items-center p-2 rounded-t-2xl border border-slate-700">
             <span className="h-3 w-3 rounded-full bg-red-500 ml-3 mr-1"></span>
             <span className="h-3 w-3 rounded-full bg-yellow-300 mx-1"></span>
             <span className="h-3 w-3 rounded-full bg-green-500 mx-1"></span>
             <div className="flex-1 flex justify-center">
-              <span className="text-slate-400 font-[JetBrains] ">
+              <span className="text-slate-400 font-[JetBrains] md:hidden ">
+                ~user/recent.log
+              </span>
+              <span className="text-slate-400 font-[JetBrains] not-md:hidden ">
                 ~user/logs/mylogs/recent.log
               </span>
             </div>
@@ -48,7 +51,7 @@ const Banner_Homepage = () => {
           </div>
 
           {/* The acutal window of the journal */}
-          <div className="bg-slate-800 h-110 w-8/10 flex flex-col p-2 px-4 gap-5 rounded-b-2xl border border-slate-700">
+          <div className="bg-slate-800 h-110 w-8/10 not-md:min-w-91.5 flex flex-col p-2 px-4 gap-5 rounded-b-2xl border border-slate-700">
             {/* The Timing */}
             <span className="text-slate-500 font-[JetBrains] mt-3 ">
               # 29 Feb : Created a Sum Code in C++

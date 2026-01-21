@@ -6,17 +6,17 @@ const Navbar = () => {
   return (
     <>
       {/* Container of the Navbar */}
-      <div className="flex bg-[#0F172A] h-17 w-full items-center px-4 justify-evenly border-b-2 border-slate-800">
+      <div className="inline-flex  bg-[#0F172A] h-17 w-full items-center px-4 justify-evenly border-b-2 border-slate-800">
         {/* Container that stores Name and Logo of the Website in Navbar */}
-        <div className="flex flex-2 min-w-40 items-center gap-4">
+        <Link to="/" className="flex flex-2 min-w-40 items-center gap-4">
           <img src="/asset/images/devlog.svg" className="w-9" />
 
           <span className="text-white text-xl font-[JetBrainsBold]">
             DevLog
           </span>
-        </div>
+        </Link>
         
-        <div className="container flex-1 flex justify-center gap-10">
+        <div className="not-md:hidden container flex-1 flex justify-center gap-10">
           <Link to="/" className="text-white text-[14px] font-[JetBrains]">
             Home
           </Link>
