@@ -25,8 +25,8 @@ const Banner_Homepage = () => {
           <div className="mt-10 flex justify-between h-[57.6]">
 
             {/* Button on Banner to create a new log */}
-            <Link to="/mylogs/newlog" className="text-white bg-[#135BEC] font-[JetBrainsBold] py-4 px-8 rounded-lg mr-4">Create a New Log</Link>
-            <Link to="/mylogs" className="text-white bg-[#1E293B] font-[JetBrainsBold] py-4 px-8 rounded-lg border border-slate-700">My Logs</Link>
+            <Link to="/DevLog/mylogs/newlog" className="text-white bg-[#135BEC] font-[JetBrainsBold] py-4 px-8 rounded-lg mr-4">Create a New Log</Link>
+            <Link to="/DevLog/mylogs" className="text-white bg-[#1E293B] font-[JetBrainsBold] py-4 px-8 rounded-lg border border-slate-700">My Logs</Link>
           </div>
 
         </div>

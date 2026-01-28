@@ -6,7 +6,7 @@ const RecentLogs_Homepage = () => {
     <>
       <div className=" px-5 flex w-full">
         <span className="text-white text-xl font-[JetBrainsBold] flex-1">Recent Logs</span>
-        <Link to="/mylogs" className='text-blue-700 hover:underline'>Visit Here</Link>
+        <Link to="/DevLog/mylogs" className='text-blue-700 hover:underline'>Visit Here</Link>
       </div>
     </>
   )

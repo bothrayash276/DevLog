@@ -13,11 +13,11 @@ function App() {
   return (
     <>
     <Routes>
-      <Route path="/" element={<HomeMainPage/>} />
-      <Route path="/mylogs" element={<><Navbar/><MyLogs/><Footer/></>} />
-      <Route path="/mylogs/newlog" element={<><EntryLog/></>} />
-      <Route path="/mylogs/editlog/:id" element={<><EditWindow_MyLogs/></>} />
-      <Route path="/dev" element={<><Dev/></>} />
+      <Route path="/DevLog/" element={<HomeMainPage/>} />
+      <Route path="/DevLog/mylogs" element={<><Navbar/><MyLogs/><Footer/></>} />
+      <Route path="/DevLog/mylogs/newlog" element={<><EntryLog/></>} />
+      <Route path="/DevLog/mylogs/editlog/:id" element={<><EditWindow_MyLogs/></>} />
+      <Route path="/DevLog/dev" element={<><Dev/></>} />
     </Routes>
     </>
   )
