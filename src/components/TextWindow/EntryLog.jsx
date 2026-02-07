@@ -41,7 +41,7 @@ const EntryLog = () => {
           {/* Return Button */}
           <button
             onClick={() => navigate(-1)}
-            className="text-[#94A3B8] flex gap-2 items-center font-[JetBrainsBold] text-[13px] px-6 py-1.5 mr-5 rounded-lg"
+            className="text-[#94A3B8] flex gap-2 items-center font-[JetBrainsBold] text-[13px] px-6 py-1.5 mr-5 rounded-lg cursor-pointer"
           >
             <img src="/asset/images/return.svg" alt="" className="w-4 h-4" />
             RETURN
@@ -49,7 +49,7 @@ const EntryLog = () => {
           {/* Save Button */}
           <Link
             to="/mylogs"
-            className="text-white flex items-center gap-3 font-[JetBrainsBold] text-[14px] bg-[#135BEC] px-3 py-1.5 rounded-lg"
+            className="text-white flex items-center gap-3 font-[JetBrainsBold] text-[14px] bg-[#135BEC] px-3 py-1.5 rounded-lg cursor-pointer"
           >
             <img src="/asset/images/mylogs.svg" alt="" className="w-4 h-4" />
             MY LOGS
