@@ -16,6 +16,7 @@ function App() {
       <Route path="/mylogs" element={<><Navbar/><MyLogs/><Footer/></>} />
       <Route path="/mylogs/newlog" element={<><EntryLog/></>} />
       <Route path="/mylogs/editlog/:id" element={<><EditWindow_MyLogs/></>} />
+      <Route path="/dev" element={<><Dev/></>} />
     </Routes>
     </>
   )
